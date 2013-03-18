@@ -1,0 +1,21 @@
+<fieldset>
+<h1>Login</h1>
+
+<%= form_for @admin_session, :as => :admin_session, :url => { :action => "create" } do |f| %>
+   
+  <%= f.label :login %><br />
+  <%= f.text_field :login %><br />
+  <br />
+  <%= f.label :password %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
+  <br />
+  <%= f.submit "Login" %><br>
+  <%= link_to 'New user' , create_path %>  
+<% end %>
+</fieldset>
+
+
+
+
